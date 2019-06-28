@@ -30,9 +30,11 @@ def results():
 @app.route("/s")
 def s():
     return render_template("s.html")
-@app.route("/info")
-def info():
-    response = API.showPrice()
+@app.route("/info", methods=["GET", "POST"])
+def info(): 
+    dat = dict(request.form)
+    name = dat["1"][0]
+    response = API.showPrice(name)
     response[0]['Product_Name']
     print(response[0]["Best_Price"])
     price_US = float(response[0]['Best_Price'].replace(",", ""))/69.01

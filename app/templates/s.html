@@ -27,34 +27,36 @@
     </ul>
   </div>
 </nav>
-        <h1>Find the Best Price?</h1>
+        <h1>Find the Best Price!</h1>
         <p>What product do you want to look at?</p>
-          <form action="#">
+          <form action="/info" method="POST">
     <p>
       <label>
-        <input res="iPhone"name="group1" type="radio" checked />
+        <input value="iphone" name="1" type="radio" />
         <span>iPhone</span>
       </label>
     </p>
     <p>
       <label>
-        <input res="iPad"name="group1" type="radio" />
+        <input value="ipad" name="1" type="radio" />
         <span>iPad</span>
       </label>
     </p>
     <p>
       <label>
-        <input res="fridge" name="group1" type="radio"  />
+        <input value="fridge" name="1" type="radio"  />
         <span>Fridge</span>
       </label>
     </p>
     <p>
       <label>
-        <input res="Microwave" name="group1" type="radio" />
+        <input value="microwave" name="1" type="radio" />
         <span>Microwave</span>
       </label>
     </p>
+    <div id="sub_button">
     <input id="sub_button" type="submit" value="Submit"/>
+    </div>
   </form>
     </body>
 </html>
